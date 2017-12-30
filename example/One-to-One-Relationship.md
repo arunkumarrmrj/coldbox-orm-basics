@@ -1,8 +1,8 @@
 ###### Application.cfc
 
-	<cfset this.name = "MyBlog_one2one_link">
+	<cfset this.name = "one-to-one">
 	<cfset this.ormenabled = "true">
-	<cfset this.ormsettings.datasource = "ORM_EG">
+	<cfset this.ormsettings.datasource = "ORM">
 	<cfset this.ormsettings.dbcreate = "dropcreate">
 
 
@@ -29,12 +29,12 @@
 ###### index.cfm
 
 	<cfset empObj = EntityNew("Employee")>
-	<cfset empObj.setFirstName("James")>
-	<cfset empObj.setLastName("Bond")>
+	<cfset empObj.setFirstName("Arunkumar")>
+	<cfset empObj.setLastName("Ramaraj")>
 
 	<cfset perObj = EntityNew("Personal")>
 	<cfset perObj.setSSN("1-1-100")>
-	<cfset perObj.setFatherName("Bond")>
+	<cfset perObj.setFatherName("ramaraj")>
 	<cfset perObj.setEmployeeObj(empObj)>
 
 	<cfset empObj.setPersonalObj(perObj)>
